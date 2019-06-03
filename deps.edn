@@ -1,0 +1,9 @@
+{:aliases {:native-image
+           {:main-opts ["-m clj.native-image core"
+                        "--initialize-at-build-time"
+                        "-H:Name=core"]
+            :jvm-opts  ["-Dclojure.compiler.direct-linking=true"]
+            :extra-deps
+            {clj.native-image
+             {:git/url "https://github.com/taylorwood/clj.native-image.git"
+              :sha     "567176ddb0f7507c8b0969e0a10f60f848afaf7d"}}}}}
